@@ -8,6 +8,8 @@ import { errorMiddleware } from "./middlewares/error.js";
 import messageRouter from "./router/messageRouter.js";
 import userRouter from "./router/userRouter.js";
 import appointmentRouter from "./router/appointmentRouter.js";
+import multer from "multer";
+
 
 const app = express();
 config({ path: "./config/config.env"});
@@ -24,15 +26,41 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(
-  fileUpload({
-    useTempFiles: true,
-    tempFileDir: "/tmp/",
-  })
-);
+
 app.use("/api/v1/message", messageRouter);
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/appointment", appointmentRouter);
+
+
+
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/')
+  },
+  filename: function (req, file, cb) {
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+    cb(null, file.fieldname + '-' + uniqueSuffix)
+  }
+})
+
+const upload = multer({ storage: storage })
+
+
+//making routes for uploading files..
+app.post('api/v1/user/patient/me/upload',upload.single("fileName"),(req,res)=>{
+      console.log(req.body);
+     // console.log(req.file);
+    //  return res.redirect("/");
+    res.send("uploaded")
+})
+/*
+app.post('/',upload.single(),(req,res)=>{
+      console.log(req.body);
+      console.log(req.file);
+      return res.redirect("/");
+})
+*/
 
 dbConnection();
 
