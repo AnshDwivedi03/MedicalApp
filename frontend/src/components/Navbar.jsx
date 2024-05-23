@@ -50,7 +50,7 @@ const Navbar = () => {
             {/* yha comment kr rha hu*/}
 
             <Link to={"/Uploads"} onClick={() => setShow(!show)}>
-              About Us
+              Uploads
             </Link>
             
             {/* yha comment kr rha hu*/}

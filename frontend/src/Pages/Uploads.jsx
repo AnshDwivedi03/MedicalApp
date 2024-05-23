@@ -10,7 +10,7 @@ const UploadProgress = () => {
   
     try {
       const result = await axios.post(
-        "http://localhost:4000/upload",
+        "http://localhost:4000/api/v1/Uploads",
         formData,
         {
           headers: {
