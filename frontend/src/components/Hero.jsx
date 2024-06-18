@@ -7,12 +7,7 @@ const Hero = ({ title, imageUrl }) => {
         <div className="banner">
           <h1>{title}</h1>
           <p>
-            ZeeCare Medical Institute is a state-of-the-art facility dedicated
-            to providing comprehensive healthcare services with compassion and
-            expertise. Our team of skilled professionals is committed to
-            delivering personalized care tailored to each patient's needs. At
-            ZeeCare, we prioritize your well-being, ensuring a harmonious
-            journey towards optimal health and wellness.
+          The XRAY Medical App is a state-of-the-art platform designed to streamline the procurement and management of medical supplies while offering a comprehensive website solution for hospitals. Built with the latest technologies, XRAY Medical App ensures efficient inventory management, seamless supply ordering, and robust online presence for healthcare institutions. This app facilitates the seamless operation of hospitals by integrating supply chain management with an intuitive website interface, enhancing both administrative efficiency and patient engagement.
           </p>
         </div>
         <div className="banner">

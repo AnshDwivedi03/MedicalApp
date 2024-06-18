@@ -51,8 +51,6 @@ const upload = multer({ storage: storage })
 //making routes for uploading files..
 app.post("/api/v1/Uploads",upload.single("fileName"),(req,res)=>{
       console.log(req.body);
-     // console.log(req.file);
-    //  return res.redirect("/");
     res.send("uploaded")
 })
 /*

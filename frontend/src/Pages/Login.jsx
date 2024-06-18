@@ -46,10 +46,9 @@ const Login = () => {
     <>
       <div className="container form-component login-form">
         <h2>Sign In</h2>
-        <p>Please Login To Continue</p>
+        <p> <font color="black">Please Login To Continue</font></p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat culpa
-          voluptas expedita itaque ex, totam ad quod error?
+          
         </p>
         <form onSubmit={handleLogin}>
           <input
@@ -77,7 +76,7 @@ const Login = () => {
               flexDirection: "row",
             }}
           >
-            <p style={{ marginBottom: 0 }}>Not Registered?</p>
+            <p style={{ marginBottom: 0 }}> <font color="black">Not Registered?  </font></p>
             <Link
               to={"/register"}
               style={{ textDecoration: "none", color: "#271776ca" }}
