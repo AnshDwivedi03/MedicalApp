@@ -21,7 +21,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/v1/user/patient/me",
+          "https://medicalapp-backend.onrender.com/api/v1/user/patient/me",
           {
             withCredentials: true,
           }
@@ -44,7 +44,9 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/appointment" element={<Appointment />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/about" element={<AboutUs />} />
           <Route path="/Uploads" element={<Uploads />} />  
+          <Route path="/Uploads" element={<Uploads/>} />  
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
         </Routes>

@@ -15,7 +15,7 @@ const MessageForm = () => {
       await axios
       // 4hr 6min
         .post(
-          "http://localhost:4000/api/v1/message/send",
+          "https://medicalapp-backend.onrender.com/api/v1/message/send",
           { firstName, lastName, email, phone, message },
           {
             withCredentials: true,

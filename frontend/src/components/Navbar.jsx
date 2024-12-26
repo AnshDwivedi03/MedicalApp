@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     await axios
-      .get("http://localhost:4000/api/v1/user/patient/logout", {
+      .get("https://medicalapp-backend.onrender.com/api/v1/user/patient/logout", {
         withCredentials: true,
       })
       .then((res) => {
@@ -51,6 +51,11 @@ const Navbar = () => {
 
             <Link to={"/Uploads"} onClick={() => setShow(!show)}>
               Uploads
+            </Link>
+
+
+            <Link to={"https://heart-attack-prediction-client.vercel.app/"} onClick={() => setShow(!show)}>
+              Prediction
             </Link>
             
             {/* yha comment kr rha hu*/}
