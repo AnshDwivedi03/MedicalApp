@@ -201,6 +201,7 @@ export const logoutAdmin = catchAsyncErrors(async (req, res, next) => {
     .cookie("adminToken", "", {
       httpOnly: true,
       expires: new Date(Date.now()),
+      //hosting purpose
       secure:true,
       sameSite:"None"
     })
